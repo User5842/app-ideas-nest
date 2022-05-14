@@ -4,9 +4,10 @@
   "description": "Application ideas server.",
   "private": true,
   "scripts": {
-    "prebuild": "rimraf built && npm run format",
+    "prebuild": "rimraf built && npm run lint && npm run format",
     "build": "nest build",
     "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.ts",
     "start": "nest start",
     "start:debug": "nest start --debug --watch",
     "start:dev": "nest start --watch"
@@ -24,9 +25,13 @@
   },
   "devDependencies": {
     "@types/node": "17.0.33",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
     "prettier": "2.6.2",
     "rimraf": "3.0.2",
     "source-map-support": "0.5.21",
-    "typescript": "4.6.4"
+    "typescript": "^4.6.4"
   }
 }

@@ -10,6 +10,6 @@ I'm a fan of creating projects with the _least_ amount of necessary boilerplate,
 
 ## TODO
 
-- [] Add Prettier
+- [x] Add Prettier
 - [] Add TypeScript eslint
 - [] Add linting rule for spacing between imports

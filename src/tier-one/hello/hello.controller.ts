@@ -6,8 +6,8 @@ export class HelloController {
   constructor(private helloService: HelloService) {}
 
   @Get(":lang")
-  async sayHello(@Param() params: any) {
-    return this.helloService.sayHello(params.lang).then((res) => {
+  async sayHello(@Param("lang") lang: string) {
+    return this.helloService.sayHello(lang).then((res) => {
       if (res.statusText === "OK") {
         return res.data;
       }
