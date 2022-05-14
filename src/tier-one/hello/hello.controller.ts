@@ -13,10 +13,7 @@ export class HelloController {
    */
   @Get(":lang")
   async sayHello(@Param("lang") lang: string) {
-    return this.helloService.sayHello(lang).then((res) => {
-      if (res.statusText === "OK") {
-        return res.data;
-      }
-    });
+    const { data } = await this.helloService.sayHello(lang);
+    return data;
   }
 }
