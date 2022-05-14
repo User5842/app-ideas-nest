@@ -12,4 +12,4 @@ I'm a fan of creating projects with the _least_ amount of necessary boilerplate,
 
 - [x] Add Prettier
 - [x] Add TypeScript eslint
-- [] Add linting rule for spacing between imports
+- [x] Add linting rule for spacing between imports
