@@ -1,11 +1,12 @@
 import { Injectable } from "@nestjs/common";
-
 import axios from "axios";
+
+import { Hello } from "./hello.interface";
 
 @Injectable()
 export class HelloService {
   sayHello(lang: string) {
-    return axios.get(this.getRequestUrl(lang));
+    return axios.get<Hello>(this.getRequestUrl(lang));
   }
 
   private getRequestUrl(lang: string) {

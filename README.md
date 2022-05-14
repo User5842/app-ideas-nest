@@ -11,5 +11,5 @@ I'm a fan of creating projects with the _least_ amount of necessary boilerplate,
 ## TODO
 
 - [x] Add Prettier
-- [] Add TypeScript eslint
+- [x] Add TypeScript eslint
 - [] Add linting rule for spacing between imports
