@@ -4,7 +4,7 @@
   "description": "Application ideas server.",
   "private": true,
   "scripts": {
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf built",
     "build": "nest build",
     "start": "nest start",
     "start:dev": "nest start --watch"
@@ -19,7 +19,9 @@
     "rxjs": "7.5.5"
   },
   "devDependencies": {
-    "rimraf": "^3.0.2",
-    "typescript": "^4.6.4"
+    "@types/node": "17.0.33",
+    "rimraf": "3.0.2",
+    "source-map-support": "0.5.21",
+    "typescript": "4.6.4"
   }
 }
