@@ -1,0 +1,25 @@
+{
+  "name": "app-ideas-nest",
+  "version": "1.0.0",
+  "description": "Application ideas server.",
+  "private": true,
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "start": "nest start",
+    "start:dev": "nest start --watch"
+  },
+  "keywords": [],
+  "author": "Rafael Negron",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "8.4.5",
+    "@nestjs/core": "8.4.5",
+    "reflect-metadata": "0.1.13",
+    "rxjs": "7.5.5"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
+  }
+}
