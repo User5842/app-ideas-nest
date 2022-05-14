@@ -5,6 +5,12 @@ import { Hello } from "./hello.interface";
 
 @Injectable()
 export class HelloService {
+  /**
+   * Makes a request to the `hellosalut` service to retrieve
+   * a greeting in the users chosen language.
+   * @param lang The language code.
+   * @returns A response containing greeting information.
+   */
   sayHello(lang: string) {
     return axios.get<Hello>(this.getRequestUrl(lang));
   }
