@@ -13,3 +13,4 @@ I'm a fan of creating projects with the _least_ amount of necessary boilerplate,
 - [x] Add Prettier
 - [x] Add TypeScript eslint
 - [x] Add linting rule for spacing between imports
+- [ ] Deploy with Heroku
