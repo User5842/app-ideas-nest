@@ -11,12 +11,26 @@ export class HelloService {
   /**
    * Makes a request to the `hellosalut` service to retrieve
    * a greeting in the users chosen language.
-   * @param lang The language code.
+   * @param code The language code.
    * @returns A response containing greeting information.
    */
-  sayHello(lang: string) {
+  sayHelloWithCode(code: string) {
     const baseURL = new URL("https://fourtonfish.com/hellosalut");
-    baseURL.searchParams.append("lang", lang);
+    baseURL.searchParams.append("lang", code);
+
+    const stream = this.httpService.get<Hello>(baseURL.toString());
+    return firstValueFrom(stream);
+  }
+
+  /**
+   * Makes a request to the `hellosalut` service to retrieve
+   * a greeting in the users chosen language.
+   * @param ip The users IPv4 address.
+   * @returns A response containing greeting information.
+   */
+  sayHelloWithIP(ip: string) {
+    const baseURL = new URL("https://fourtonfish.com/hellosalut");
+    baseURL.searchParams.append("ip", ip);
 
     const stream = this.httpService.get<Hello>(baseURL.toString());
     return firstValueFrom(stream);

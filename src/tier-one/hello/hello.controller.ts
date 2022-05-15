@@ -8,12 +8,23 @@ export class HelloController {
 
   /**
    * Routes the request to the `helloService`.
-   * @param lang The language code.
+   * @param code The language code.
    * @returns The data for the greeting in the users chosen language.
    */
-  @Get(":lang")
-  async sayHello(@Param("lang") lang: string) {
-    const { data } = await this.helloService.sayHello(lang);
+  @Get("code/:code")
+  async sayHelloWithCode(@Param("code") code: string) {
+    const { data } = await this.helloService.sayHelloWithCode(code);
+    return data;
+  }
+
+  /**
+   * Routes the request to the `helloService`.
+   * @param ip The users IPv4 address.
+   * @returns The data for the greeting in the users chosen language.
+   */
+  @Get("ip/:ip")
+  async sayHelloWithIP(@Param("ip") ip: string) {
+    const { data } = await this.helloService.sayHelloWithIP(ip);
     return data;
   }
 }
