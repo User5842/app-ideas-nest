@@ -21,10 +21,14 @@
     "@nestjs/common": "8.4.5",
     "@nestjs/core": "8.4.5",
     "@nestjs/platform-express": "^8.4.5",
+    "@nestjs/swagger": "^5.2.1",
+    "compression": "^1.7.4",
     "reflect-metadata": "0.1.13",
-    "rxjs": "7.5.5"
+    "rxjs": "7.5.5",
+    "swagger-ui-express": "^4.4.0"
   },
   "devDependencies": {
+    "@types/compression": "^1.7.2",
     "@types/node": "17.0.33",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
